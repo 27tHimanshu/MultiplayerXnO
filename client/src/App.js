@@ -6,9 +6,28 @@ import { Chat } from "stream-chat-react";
 import Cookies from "universal-cookie";
 import { useState } from "react";
 import JoinGame from "./components/JoinGame";
+import React, { useEffect } from 'react';
+import axios from 'axios';
+
 // hbjhvutgubbuyuvug
 
 function App() {
+   useEffect(() => {
+    
+    const apiUrl = 'https://multiplayer-xno.vercel.app/';
+
+    
+    axios.get(apiUrl)
+      .then(response => {
+        console.log('Data fetched successfully:', response.data);
+        // Handle state update or other logic with the fetched data
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        // Handle error scenarios
+      });
+  }, []); 
+  
   const api_key = "7te7jj26v8wg";
   const cookies = new Cookies();
   const token = cookies.get("token");
