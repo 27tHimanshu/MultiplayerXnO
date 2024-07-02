@@ -12,21 +12,21 @@ import axios from 'axios';
 // hbjhvutgubbuyuvug
 
 function App() {
-   useEffect(() => {
+  //  useEffect(() => {
     
-    const apiUrl = 'https://multiplayer-xno.vercel.app';
+  //   const apiUrl = 'https://multiplayer-xno.vercel.app';
 
     
-    axios.get(apiUrl)
-      .then(response => {
-        console.log('Data fetched successfully:', response.data);
-        // Handle state update or other logic with the fetched data
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-        // Handle error scenarios
-      });
-  }, []); 
+  //   axios.get(apiUrl)
+  //     .then(response => {
+  //       console.log('Data fetched successfully:', response.data);
+  //       // Handle state update or other logic with the fetched data
+  //     })
+  //     .catch(error => {
+  //       console.error('Error fetching data:', error);
+  //       // Handle error scenarios
+  //     });
+  // }, []); 
   
   const api_key = "7te7jj26v8wg";
   const cookies = new Cookies();
