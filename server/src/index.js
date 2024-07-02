@@ -5,7 +5,14 @@ import { v4 as uuidv4 } from "uuid";
 import bcrypt from "bcrypt";
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: ['https://multiplayer-xno-front.vercel.app'], 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 const api_key = "7te7jj26v8wg";
 const api_secret =
