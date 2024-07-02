@@ -7,7 +7,7 @@ const app = express();
 
 const corsOptions = {
   origin: ['https://multiplayer-xno-front.vercel.app'], 
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
