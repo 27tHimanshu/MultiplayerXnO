@@ -11,6 +11,8 @@ function Login({ setIsAuth }) {
     Axios.post("https://multiplayer-xno.vercel.app/login", {
       username,
       password,
+    }, {
+      withCredentials: true  // Ensure this option is set
     }).then((res) => {
       const { firstName, lastName, username, token, userId } = res.data;
       cookies.set("token", token);
@@ -19,12 +21,15 @@ function Login({ setIsAuth }) {
       cookies.set("firstName", firstName);
       cookies.set("lastName", lastName);
       setIsAuth(true);
+    }).catch((error) => {
+      console.error("Login error:", error);
+      // Handle error if needed
     });
   };
+
   return (
     <div className="login">
       <label> Login</label>
-
       <input
         placeholder="Username"
         onChange={(event) => {
