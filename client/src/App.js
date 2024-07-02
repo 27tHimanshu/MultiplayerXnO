@@ -14,7 +14,7 @@ import axios from 'axios';
 function App() {
    useEffect(() => {
     
-    const apiUrl = 'https://multiplayer-xno.vercel.app/';
+    const apiUrl = 'https://multiplayer-xno.vercel.app';
 
     
     axios.get(apiUrl)
