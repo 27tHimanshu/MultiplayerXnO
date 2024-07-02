@@ -1,0 +1,27 @@
+# Node.js dependencies
+node_modules/
+.yarn/
+.yarnrc.yml
+.pnp.*
+.yarn-integrity
+
+# Yarn lock file
+yarn.lock
+
+# Environment variables
+.env
+
+# Build artifacts
+/build/
+/dist/
+/out/
+
+# IDE or editor specific files
+.vscode/
+.idea/
+
+# macOS specific files
+.DS_Store
+
+# Logs
+*.log
