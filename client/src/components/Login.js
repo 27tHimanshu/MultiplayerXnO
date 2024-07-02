@@ -8,7 +8,7 @@ function Login({ setIsAuth }) {
 
   const cookies = new Cookies();
   const login = () => {
-    Axios.post("https://multiplayer-xno.vercel.app", {
+    Axios.post("https://multiplayer-xno.vercel.app/login", {
       username,
       password,
     }).then((res) => {
