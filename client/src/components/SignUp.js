@@ -7,7 +7,7 @@ function SignUp({ setIsAuth }) {
   const [user, setUser] = useState(null);
 
   const signUp = () => {
-    Axios.post("https://multiplayer-xno.vercel.app", user).then((res) => {
+    Axios.post("https://multiplayer-xno.vercel.app/signup", user).then((res) => {
       const { token, userId, firstName, lastName, username, hashedPassword } =
         res.data;
       cookies.set("token", token);
